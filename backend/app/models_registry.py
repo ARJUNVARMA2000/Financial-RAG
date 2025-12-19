@@ -13,8 +13,9 @@ EVAL_MODELS: Dict[str, str] = {
     "claude-sonnet-4.5": "anthropic/claude-sonnet-4.5",
     # Google models
     "gemini-3-pro": "google/gemini-3-pro-preview",
+    "gemini-3-flash": "google/gemini-3-flash-preview",
     # OpenAI models
-    "gpt-5.1": "openai/gpt-5.1",
+    "gpt-5.2": "openai/gpt-5.2",
     # Moonshot AI models
     "kimi-k2-thinking": "moonshotai/kimi-k2-thinking",
     # Meta Llama models - best open source
@@ -30,7 +31,8 @@ MODEL_COSTS_PER_1M_TOKENS: Dict[str, Dict[str, float]] = {
     "anthropic/claude-opus-4.5": {"input": 5.0, "output": 25.0},
     "anthropic/claude-sonnet-4.5": {"input": 3.0, "output": 15.0},
     "google/gemini-3-pro-preview": {"input": 2.0, "output": 12.0},
-    "openai/gpt-5.1": {"input": 1.25, "output": 10.0},
+    "google/gemini-3-flash-preview": {"input": 0.5, "output": 3.0},
+    "openai/gpt-5.2": {"input": 1.25, "output": 10.0},
     "moonshotai/kimi-k2-thinking": {"input": 0.45, "output": 2.35},
     "meta-llama/llama-4-maverick": {"input": 0.136, "output": 0.68},
 }

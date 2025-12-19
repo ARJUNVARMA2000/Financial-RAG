@@ -8,6 +8,14 @@ An intelligent LLM-powered chatbot that answers questions about company financia
 
 ---
 
+## 🌐 Live Demo
+
+The project is hosted and available at: **https://financialrag-chatbot.streamlit.app/**
+
+Try it out and ask questions about company financials!
+
+---
+
 ## ✨ Features
 
 - 🎨 **Futuristic UI** — Minimalist, dark-themed chat interface with "glassmorphism" design
@@ -301,8 +309,9 @@ Evaluate RAG performance across multiple LLMs with Claude Opus as the judge.
 |-------|-------|
 | `claude-opus-4.5` | Anthropic Claude Opus 4.5 |
 | `claude-sonnet-4.5` | Anthropic Claude Sonnet 4.5 |
-| `gpt-5.1` | OpenAI GPT-5.1 |
+| `gpt-5.2` | OpenAI GPT-5.2 |
 | `gemini-3-pro` | Google Gemini 3 Pro |
+| `gemini-3-flash` | Google Gemini 3 Flash |
 | `llama-4-maverick` | Meta Llama 4 Maverick |
 | `kimi-k2-thinking` | Moonshot Kimi K2 |
 
@@ -313,7 +322,7 @@ Evaluate RAG performance across multiple LLMs with Claude Opus as the judge.
 python scripts/run_eval.py --csv data/eval/questions_example.csv --models all
 
 # Evaluate specific models
-python scripts/run_eval.py --csv data/eval/questions_example.csv --models claude-sonnet-4.5,gpt-5.1
+python scripts/run_eval.py --csv data/eval/questions_example.csv --models claude-sonnet-4.5,gpt-5.2
 
 # Quick regression (first N questions) and custom API base
 python scripts/run_eval.py --csv data/eval/questions_example.csv --models all --limit 5 --api-base http://localhost:8000
