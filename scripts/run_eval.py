@@ -241,7 +241,7 @@ def save_results(results: EvalResults, output_dir: str) -> tuple[str, str]:
     # Save detailed results CSV
     detailed_path = output_path / f"eval_detailed_{timestamp}.csv"
     with open(detailed_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         writer.writerow([
             "model", "question", "expected_answer", "actual_answer", "is_correct",
             "input_tokens", "output_tokens", "cost",
@@ -257,7 +257,7 @@ def save_results(results: EvalResults, output_dir: str) -> tuple[str, str]:
     # Save summary results CSV
     summary_path = output_path / f"eval_summary_{timestamp}.csv"
     with open(summary_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         writer.writerow([
             "model", "total_questions", "correct", "accuracy",
             "total_input_tokens", "total_output_tokens", "total_cost",

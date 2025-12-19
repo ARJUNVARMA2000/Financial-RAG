@@ -305,6 +305,8 @@ Evaluate RAG performance across multiple LLMs with Claude Opus as the judge.
 
 ### Available Models
 
+The evaluation compares **7 models** across different providers:
+
 | Alias | Model |
 |-------|-------|
 | `claude-opus-4.5` | Anthropic Claude Opus 4.5 |
@@ -319,13 +321,13 @@ Evaluate RAG performance across multiple LLMs with Claude Opus as the judge.
 
 ```bash
 # Evaluate all models
-python scripts/run_eval.py --csv data/eval/questions_example.csv --models all
+python scripts/run_eval.py --csv data/eval/questions_finaleval.csv --models all
 
 # Evaluate specific models
-python scripts/run_eval.py --csv data/eval/questions_example.csv --models claude-sonnet-4.5,gpt-5.2
+python scripts/run_eval.py --csv data/eval/questions_finaleval.csv --models claude-sonnet-4.5,gpt-5.2
 
 # Quick regression (first N questions) and custom API base
-python scripts/run_eval.py --csv data/eval/questions_example.csv --models all --limit 5 --api-base http://localhost:8000
+python scripts/run_eval.py --csv data/eval/questions_finaleval.csv --models all --limit 5 --api-base http://localhost:8000
 ```
 
 ### Evaluation CSV Format
