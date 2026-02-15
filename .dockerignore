@@ -1,0 +1,33 @@
+.git
+.gitignore
+.env
+*.env
+
+# Large raw data (293MB) - not needed at runtime
+data/raw/
+data/eval/
+
+# Build artifacts
+chroma_index.zip
+__pycache__
+*.pyc
+venv/
+.venv/
+
+# Scripts (build-time only)
+scripts/
+
+# Railway configs
+Procfile
+Procfile.frontend
+railway.json
+
+# Docs
+README.md
+SETUP_GUIDE.md
+DEPLOYMENT.md
+env.example.txt
+
+# Dockerfiles (don't copy into images)
+Dockerfile.*
+.dockerignore

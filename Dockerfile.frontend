@@ -1,0 +1,18 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# Install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy frontend source
+COPY frontend/ frontend/
+
+# Copy backend package (streamlit_app.py imports from backend.app.services.llm_text_formatter)
+COPY backend/ backend/
+
+# Cloud Run sets PORT env var (default 8501 for Streamlit)
+ENV PORT=8501
+
+CMD streamlit run frontend/streamlit_app.py --server.port=${PORT} --server.address=0.0.0.0 --server.headless=true

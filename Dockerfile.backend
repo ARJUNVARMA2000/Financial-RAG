@@ -1,0 +1,21 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# Install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy backend source code
+COPY backend/ backend/
+
+# Copy pre-built ChromaDB index (96MB)
+COPY data/indexes/chroma/ data/indexes/chroma/
+
+# Create empty data/raw dir (config.py expects it)
+RUN mkdir -p data/raw data/processed
+
+# Cloud Run sets PORT env var (default 8080)
+ENV PORT=8080
+
+CMD uvicorn backend.app.main:app --host 0.0.0.0 --port ${PORT}

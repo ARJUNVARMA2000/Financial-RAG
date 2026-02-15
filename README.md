@@ -10,7 +10,7 @@ An intelligent LLM-powered chatbot that answers questions about company financia
 
 ## 🌐 Live Demo
 
-The project is hosted and available at: **https://financialrag-chatbot.streamlit.app/**
+The project is hosted on GCP Cloud Run: **https://finrag-frontend-7pj7nolpla-uc.a.run.app/**
 
 Try it out and ask questions about company financials!
 
