@@ -312,7 +312,7 @@ The evaluation compares **7 models** across different providers:
 | `claude-opus-4.5` | Anthropic Claude Opus 4.5 |
 | `claude-sonnet-4.5` | Anthropic Claude Sonnet 4.5 |
 | `gpt-5.2` | OpenAI GPT-5.2 |
-| `gemini-3-pro` | Google Gemini 3 Pro |
+| `gemini-3-pro` | Google Gemini 3.1 Pro (compatible `gemini-3-pro` alias) |
 | `gemini-3-flash` | Google Gemini 3 Flash |
 | `llama-4-maverick` | Meta Llama 4 Maverick |
 | `kimi-k2-thinking` | Moonshot Kimi K2 |
@@ -412,3 +412,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 <p align="center">
   Built with ❤️ for financial analysis
 </p>
+
+### Gemini evaluation models
+
+The `gemini-3-pro` alias now resolves to OpenRouter `google/gemini-3.1-pro-preview`, replacing the unavailable Gemini 3 Pro endpoint. Saved evaluation results retain their original model labels and scores. The `gemini-3-flash` mapping is unchanged and remains available in the OpenRouter catalog.
